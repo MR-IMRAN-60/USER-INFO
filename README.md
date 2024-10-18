@@ -97,9 +97,9 @@ Adds a new user using query parameters.
 
 ## Required Fields:
 
-## name
-## address
-## mobile
+*name*
+-address-
++mobile+
 ## Example:
 
 ```bash
