@@ -85,6 +85,25 @@ The API will be available at http://localhost:3000.
 ```
 
 ## 3. Create a New User
+
+## Add User (GET)
+```bash
+GET /adduser?id={id}&name={name}&address={address}&mobile={mobile}&url={url}&fburl={fburl}
+```
+Adds a new user using query parameters.
+
+## Required Fields:
+
+## name
+## address
+## mobile
+## Example:
+
+```bash
+GET /adduser?id=4&name=Imran Ahmed&address=Faridpur,Dhaka&mobile=017&url=ok&fburl=www.Facebook.com/100075122837809
+```
+Add User (POST)
+
 ## Endpoint: POST /users
 
 ## Request Body:
