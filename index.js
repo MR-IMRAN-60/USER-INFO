@@ -2,8 +2,12 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 const port = 3000;
+const path = require('path');
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'views')));
+app.get("/", (req, res) => res.send(__dirname + '/views/index.html'));
+
 
 const readUsersFromFile = () => {
   const data = fs.readFileSync('users.json');
