@@ -36,7 +36,7 @@ The API will be available at http://localhost:3000.
 ## API Endpoints
 ## 1. Get All Users
 ```bash 
- Endpoint: GET /users
+ Endpoint: GET http://localhost:3000/users
 ```
 ## Response:
 ## Body: 
@@ -57,7 +57,7 @@ The API will be available at http://localhost:3000.
 ## 2. Get User by ID
 ## Endpoint: 
 ```bash
-GET /users/:id
+GET http://localhost:3000/users/:1
 ```
 ## Parameters:
 
@@ -91,7 +91,7 @@ GET /users/:id
 
 ## Add User (GET)
 ```bash
-GET /adduser?id={id}&name={name}&address={address}&mobile={mobile}&url={url}&fburl={fburl}
+GET http://localhost:3000/adduser?id={id}&name={name}&address={address}&mobile={mobile}&url={url}&fburl={fburl}
 ```
 Adds a new user using query parameters.
 
@@ -103,7 +103,7 @@ Adds a new user using query parameters.
 ## Example:
 
 ```bash
-GET /adduser?id=4&name=Imran Ahmed&address=Faridpur,Dhaka&mobile=017&url=ok&fburl=www.Facebook.com/100075122837809
+GET http://localhost:3000/adduser?id=4&name=Imran Ahmed&address=Faridpur,Dhaka&mobile=017&url=ok&fburl=www.Facebook.com/100075122837809
 ```
 Add User (POST)
 
