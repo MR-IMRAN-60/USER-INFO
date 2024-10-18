@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+    background:url(https://wallpapers.com/images/high/nature-android-hd-yyoz8w3usrejlzk9.webp);
+        }
+        .profile {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: transparent ;
+     padding:10px 15px;
+     border-radius:10px;
+     box-shadow: -3px -3px 7px #000,
+                2px 2px 5px rgba(94,104,121,0.288);
+     z-index:1;
+     border:1px solid rgba(255,255,255,0.3);
+            
+        }
+        h1 {
+            color: #FF5733;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        a {
+            color: #007BFF;
+        }
+        input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile" id="userProfile">
+        <h1>User Profile</h1>
+        <input type="number" id="userIdInput" placeholder="Enter User ID" min="1">
+        <button id="fetchButton">Fetch User</button>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+        <p><strong>Facebook:</strong> <a id="facebookLink" href="#" target="_blank">Visit Profile</a></p>
+        <img id="profileImage" src="" alt="Profile Image" style="display:none;">
+    </div>
+    <div class="copyright">
+        &copy; 2024 All rights reserved. Mohammad Imran
+    </div>
+    <script>
+        async function fetchUserData(userId) {
+            try {
+                const response = await fetch(`/users/${userId}`);
+                
+                // Check if the response is okay
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const apiResponse = await response.json();
+
+                // Displaying the API response in the HTML
+                document.getElementById('name').textContent = apiResponse.name;
+                document.getElementById('address').textContent = apiResponse.address;
+                document.getElementById('mobile').textContent = apiResponse.mobile;
+                document.getElementById('facebookLink').href = apiResponse.fburl;
+                document.getElementById('profileImage').src = apiResponse.url;
+
+                // Show the profile image if the URL is valid
+                if (apiResponse.url) {
+                    document.getElementById('profileImage').style.display = 'block';
+                } else {
+                    document.getElementById('profileImage').style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+                // Optionally, display an error message to the user
+                alert('User not found or an error occurred.');
+            }
+        }
+
+        document.getElementById('fetchButton').addEventListener('click', () => {
+            const userId = document.getElementById('userIdInput').value;
+            if (userId) {
+                fetchUserData(userId);
+            } else {
+                alert('Please enter a valid user ID.');
+            }
+        });
+    </script>
+</body>
+</html>
