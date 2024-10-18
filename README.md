@@ -13,8 +13,8 @@ This is a simple User Management API built with Express.js. The API allows you t
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/user-management-api.git
-   cd user-management-api
+   git clone https://github.com/MR-IMRAN-60/USER-INFO.git
+   cd USER-INFO
 
 2. Install dependencies:
 ```bash
@@ -41,7 +41,6 @@ The API will be available at http://localhost:3000.
 ## Body: 
 
 ```json
-Copy code
 [
   {
     "id": 1,
@@ -51,7 +50,7 @@ Copy code
     "url": "https://i.imgur.com/k47Q276.jpeg",
     "fburl": "www.facebook.com/Imran.Ahmed099"
   },
-  ...
+
 ]
 ```
 ## 2. Get User by ID
@@ -122,3 +121,8 @@ In case of an error, the API will return a status code along with an error messa
 ```
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+```bash
+### Usage
+- Replace `MR-IMRAN-60` in the clone command with your actual GitHub username or the repository URL.
+- This `README.md` provides a clear and structured way for users to understand how to set up and use your API, including examples of requests and responses.
+```
