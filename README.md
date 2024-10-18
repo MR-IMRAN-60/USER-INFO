@@ -35,6 +35,23 @@ The API will be available at http://localhost:3000.
 
 ## API Endpoints
 ## 1. Get All Users
-Endpoint: GET /users
+## Endpoint: GET /users
 
-Response:
+## Response:
+## Body: 
+
+```json
+Copy code
+[
+  {
+    "id": 1,
+    "name": "Imran Ahmed",
+    "address": "Dhaka",
+    "mobile": "017xxxxxxxx",
+    "url": "https://i.imgur.com/k47Q276.jpeg",
+    "fburl": "www.facebook.com/Imran.Ahmed099"
+  },
+  ...
+]
+```
+## 2. Get User by ID
