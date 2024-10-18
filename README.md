@@ -96,11 +96,11 @@ GET http://localhost:3000/adduser?id={id}&name={name}&address={address}&mobile={
 Adds a new user using query parameters.
 
 ## Required Fields:
-```bash
-***name***
-***address**
-+++mobile+++
-```
+
+## name
+## address
+## mobile
+
 ## Example:
 
 ```bash
