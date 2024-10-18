@@ -35,8 +35,9 @@ The API will be available at http://localhost:3000.
 
 ## API Endpoints
 ## 1. Get All Users
-## Endpoint: GET /users
-
+```bash 
+ Endpoint: GET /users
+```
 ## Response:
 ## Body: 
 
@@ -54,8 +55,10 @@ The API will be available at http://localhost:3000.
 ]
 ```
 ## 2. Get User by ID
-## Endpoint: GET /users/:id
-
+## Endpoint: 
+```bash
+GET /users/:id
+```
 ## Parameters:
 
 ## id: The ID of the user you want to retrieve.
@@ -104,8 +107,10 @@ GET /adduser?id=4&name=Imran Ahmed&address=Faridpur,Dhaka&mobile=017&url=ok&fbur
 ```
 Add User (POST)
 
-## Endpoint: POST /users
-
+## Endpoint: 
+```bash
+POST /users
+```
 ## Request Body:
 
 ```json
