@@ -46,8 +46,8 @@ The API will be available at http://localhost:3000.
   {
     "id": 1,
     "name": "Imran Ahmed",
-    "address": "Dhaka",
-    "mobile": "017xxxxxxxx",
+    "address": "Faridpur Dhaka",
+    "mobile": "01689903267",
     "url": "https://i.imgur.com/k47Q276.jpeg",
     "fburl": "www.facebook.com/Imran.Ahmed099"
   },
@@ -72,7 +72,7 @@ GET http://localhost:3000/users/:1
 {
   "id": 1,
   "name": "Imran Ahmed",
-  "address": "Dhaka",
+  "address": "Faridpur Dhaka",
   "mobile": "01689903267",
   "url": "https://i.imgur.com/XsdgAA6.jpeg",
   "fburl": "www.facebook.com/Imran.Ahmed099"
