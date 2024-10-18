@@ -73,8 +73,8 @@ GET http://localhost:3000/users/:1
   "id": 1,
   "name": "Imran Ahmed",
   "address": "Dhaka",
-  "mobile": "017xxxxxxxx",
-  "url": "https://i.imgur.com/k47Q276.jpeg",
+  "mobile": "01689903267",
+  "url": "https://i.imgur.com/XsdgAA6.jpeg",
   "fburl": "www.facebook.com/Imran.Ahmed099"
 }
 ```
@@ -103,7 +103,7 @@ Adds a new user using query parameters.
 ## Example:
 
 ```bash
-GET http://localhost:3000/adduser?id=4&name=Imran Ahmed&address=Faridpur,Dhaka&mobile=017&url=ok&fburl=www.Facebook.com/100075122837809
+GET http://localhost:3000/adduser?id=4&name=Imran Ahmed&address=Faridpur,Dhaka&mobile=01689903267&url=https://i.imgur.com/XsdgAA6.jpeg&fburl=www.Facebook.com/100075122837809
 ```
 Add User (POST)
 
